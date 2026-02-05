@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import logo from './assets/app_logo_1770254108766.png';
 import { cn } from './utils/cn';
 
 type Language = 'ar' | 'en';
@@ -284,10 +285,9 @@ export function App() {
         {language === 'ar' ? 'EN' : 'AR'}
       </button>
 
-      {/* Brand Logo - Top Right */}
       <div className="fixed top-4 right-4 z-50">
         <img
-          src="/app_logo_1770254108766.png"
+          src={logo}
           alt="Order Management Logo"
           className="w-12 h-12 md:w-16 md:h-16 drop-shadow-lg"
         />
@@ -525,7 +525,7 @@ export function App() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 space-x-reverse mb-4">
             <img
-              src="/app_logo_1770254108766.png"
+              src={logo}
               alt="Logo"
               className="w-10 h-10"
             />
