@@ -125,8 +125,8 @@ const translations: Translations = {
     en: 'Invoices & Reports by Time Period'
   },
   dashboardReports: {
-    ar: '📊 تقارير بيانية وتفصيلية',
-    en: '📊 Detailed Graphical Reports'
+    ar: ' تقارير بيانية وتفصيلية',
+    en: 'Detailed Graphical Reports'
   },
   whoIsForTitle: {
     ar: 'لمن هذا التطبيق؟',
@@ -213,8 +213,8 @@ const translations: Translations = {
     en: 'Download Order Management App'
   },
   downloadLink: {
-    ar: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/order_mangment_v1.apk',
-    en: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/order_mangment_v1.apk'
+    ar: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/order_mangment_v2.apk',
+    en: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/order_mangment_v2.apk'
   },
   contact: {
     ar: 'تواصل معنا',
@@ -420,6 +420,8 @@ export function App() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-center text-white mb-16 animate-on-scroll">
             {t('pricingTitle')}
+            <br/>
+            <br/>
           </h2>
           <div className="flex justify-center mb-12 animate-on-scroll">
 
@@ -448,7 +450,7 @@ export function App() {
             {/* Monthly Plan */}
             <GlassCard className="p-8 text-center animate-on-scroll border-2 border-blue-500">
 
-              <p className="text-4xl font-bold text-blue-600 mb-2">{t('offer 50%')}</p>
+              
 
               <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">
                 {t('mostPopular')}
@@ -456,7 +458,10 @@ export function App() {
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
                 {t('monthly')}
               </h3>
-              <p className="text-4xl font-bold text-blue-600 mb-2">100</p>
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="text-4xl font-bold text-blue-600">100</span>
+                <span className="text-4xl line-through text-slate-400">200</span>
+              </div>
               <p className="text-slate-700 mb-6">
                 {t('monthlyPlanDesc')}
               </p>
@@ -473,17 +478,21 @@ export function App() {
 
             {/* Lifetime Plan */}
             <GlassCard className="p-8 text-center animate-on-scroll">
-              <p className="text-4xl font-bold text-blue-600 mb-2">{t('offer 50%')}</p>
+              
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
                 {t('yearly')}
               </h3>
-              <p className="text-4xl font-bold text-blue-600 mb-2">1000</p>
-              <p className="text-slate-700 mb-2">
-                {t('yearlyPlanDesk')}
-              </p>
               <p className="text-slate-700 mb-6">
                 {t('save 200 EGP')}
               </p>
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="text-4xl font-bold text-blue-600">1000</span>
+                <span className="text-4xl  line-through text-slate-400">2000</span>
+              </div>
+              <p className="text-slate-700 mb-2">
+                {t('yearlyPlanDesk')}
+              </p>
+              
 
               <a
                 href={t('downloadLink')}
@@ -537,18 +546,32 @@ export function App() {
             </div>
           </div>
           <p className="text-slate-300 mb-6">
-            {t('contact')}: support@ordermanagement.app
-          </p>
-          <div className="flex justify-center space-x-4 space-x-reverse mb-6">
-            {[['ف', 'F'], ['ت', 'T'], ['و', 'W']].map(([ar, en], i) => (
-              <div key={i} className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors cursor-pointer">
-                {isRTL ? ar : en}
-              </div>
-            ))}
-          </div>
-          <p className="text-slate-400">
-            {t('rights')}
-          </p>
+            {t('contact')}: 01020074013
+     <a
+  href="https://wa.me/201020074013?text=i%20need%20..."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center mx-2"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    className="w-12 h-12 text-green-500 fill-current animate-bounce hover:scale-110 transition-transform duration-300"
+  >
+    <path d="M16 2.667C8.82 2.667 3 8.487 3 15.667c0 2.73.713 5.396 2.067 7.74L3 29.333l6.133-1.987A12.93 12.93 0 0016 28.667c7.18 0 13-5.82 13-13S23.18 2.667 16 2.667zm6.8 18.24c-.287.8-1.42 1.533-2.353 1.733-.64.133-1.467.24-4.267-.92-3.58-1.493-5.887-5.167-6.06-5.407-.173-.24-1.453-1.933-1.453-3.693 0-1.76.92-2.627 1.247-2.987.327-.36.713-.453.947-.453.233 0 .467.003.673.013.217.01.507-.083.793.607.287.693.973 2.387 1.06 2.56.087.173.143.373.027.6-.113.227-.173.373-.34.573-.173.2-.36.447-.513.6-.173.173-.353.36-.153.707.2.347.887 1.463 1.907 2.367 1.313 1.16 2.42 1.52 2.767 1.693.347.173.547.147.747-.087.2-.233.853-.993 1.08-1.333.227-.34.453-.287.767-.173.313.113 1.987.94 2.327 1.113.34.173.567.26.653.4.087.14.087.807-.2 1.607z"/>
+  </svg>
+</a>
+
+
+          </p>  
+         
+         <p className="fixed bottom-4 right-4 text-slate-400 text-sm">
+  {t('rights')}
+</p>
+<p className="fixed bottom-4 left-4 text-slate-400 text-sm">
+  {t('Modern Solutions')}
+</p>
+
         </div>
       </footer>
     </div>
