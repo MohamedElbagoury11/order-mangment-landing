@@ -213,8 +213,8 @@ const translations: Translations = {
     en: 'Download Order Management App'
   },
   downloadLink: {
-    ar: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/order_mangment_v2.apk',
-    en: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/order_mangment_v2.apk'
+    ar: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/Order.Mangment.v_2.apk',
+    en: 'https://github.com/MohamedElbagoury11/Orders-Management/releases/download/order_management/Order.Mangment.v_2.apk'
   },
   contact: {
     ar: 'تواصل معنا',
