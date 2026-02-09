@@ -209,8 +209,8 @@ export const translations: Translations = {
         en: 'Download Order Management App'
     },
     downloadLink: {
-        ar: './Order.Mangment.v_2.apk',
-        en: './Order.Mangment.v_2.apk'
+        ar: '/Order.Mangment.v_2.apk',
+        en: '/Order.Mangment.v_2.apk'
     },
     contact: {
         ar: 'تواصل معنا',
